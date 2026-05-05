@@ -97,7 +97,7 @@ export default function Contact() {
              💬 Let's Connect
            </div>
             <h2 className="outfit text-5xl md:text-7xl font-black uppercase leading-none">
-              <span className="text-[#FF6B35] inline-block">Let's Create</span> <span className="text-[#FF6B35]">Something Great</span>
+              <span className="text-[#FF6B35] inline-block transform -skew-x-12">Let's Create</span> <span className="text-[#FF6B35]">Something Great</span>
             </h2>
          </div>
             <div className="max-w-lg mx-auto">

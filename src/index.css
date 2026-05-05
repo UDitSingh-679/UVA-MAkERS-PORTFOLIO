@@ -165,6 +165,8 @@ select:focus-visible {
     1px 1px 0 #FF3AF2, 2px 2px 0 #FF3AF2, 3px 3px 0 #FF3AF2,
     4px 4px 0 #FF3AF2, 5px 5px 0 #FF3AF2, 6px 6px 0 #FF3AF2,
     7px 7px 0 #FF3AF2, 8px 8px 0 #FF3AF2, 9px 9px 0 #FF3AF2;
+  transform: perspective(0) translateZ(0);
+  will-change: transform;
 }
 
 .text-shadow-yellow {
