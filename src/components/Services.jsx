@@ -24,9 +24,9 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
           {servicesData.map((s, i) => (
-            <motion.div key={i} whileHover={{ y: -8, scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex flex-col bg-white rounded-3xl overflow-hidden border-2" style={{ borderColor: s.color, boxShadow: `8px 8px 0 ${s.accent}` }}>
+               <motion.div key={i} whileHover={{ y: -8, scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex flex-col bg-white rounded-3xl border-2 overflow-visible" style={{ borderColor: s.color, boxShadow: `8px 8px 0 ${s.accent}` }}>
               <div className="p-4 flex-1 flex flex-col items-center justify-center min-h-[280px]">
-                <motion.div whileHover={{ rotate: i % 2 === 0 ? 5 : -5, scale: 1.1 }} whileTap={{ scale: 0.95 }} transition={{ type: 'spring', stiffness: 300, damping: 15 }} className="bg-[#160B24] p-3 rounded-2xl border-2 w-full max-w-[280px] text-center transform transition-transform overflow-hidden" style={{ borderColor: s.color, rotate: i % 2 === 0 ? -2 : 2 }}>
+                 <motion.div whileHover={{ rotate: i % 2 === 0 ? 5 : -5, scale: 1.1 }} whileTap={{ scale: 0.95 }} transition={{ type: 'spring', stiffness: 300, damping: 15 }} className="bg-[#160B24] p-3 rounded-2xl border-2 w-full max-w-[280px] text-center transform transition-transform" style={{ borderColor: s.color, rotate: i % 2 === 0 ? -2 : 2 }}>
                    <div className="relative h-40 w-full mb-3 rounded-lg overflow-hidden border" style={{ borderColor: s.color }}>
                       <img
                         src={s.img}
