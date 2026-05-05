@@ -1,0 +1,20 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:4174",
+  "loginUser": "123",
+  "loginPassword": "123",
+  "executionArgs": {
+    "projectName": "portfolio",
+    "projectPath": "c:\\Users\\Udit Singh\\Downloads\\New folder (2)\\portfolio",
+    "testIds": [],
+    "additionalInstruction": "",
+    "serverMode": "production",
+    "envs": {
+      "API_KEY": "sk-user-NT2EXCuFXiMNEdACsV48oCcuXsJlJJpO7JONzOqV1x1CnHoFBusPQb3bihxNNn2skvE20ptKrjFypcw-j--tvd56HcucU59T7nmTnxFc-hUFO5pK6yZWv8_O_lQCIKPkocE"
+    }
+  },
+  "serverPort": 62152,
+  "proxy": "http://02d9ecba-9522-4944-95b9-049626f3c746:qkJoyjdu4u4VJowrCryBREHs91DCb3Kf@tun.testsprite.com:8080"
+}

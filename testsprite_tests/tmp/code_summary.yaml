@@ -1,0 +1,26 @@
+version: "2"
+type: frontend
+tech_stack:
+  - javascript
+  - react
+  - vite
+  - tailwindcss
+  - framer-motion
+routes:
+  - path: /
+    file: src/App.jsx
+    auth_required: false
+    description: Single page portfolio
+features:
+  - name: Contact Form
+    description: User contact form that redirects to WhatsApp
+    files:
+      - src/sections/Contact.jsx
+    entry_route: /
+    user_interactions:
+      - Fill name input field (contact-name)
+      - Fill phone input field (contact-tel)
+      - Fill message textarea (contact-msg)
+      - Click "LET'S TALK ON WHATSAPP" button to submit
+    auth_required: false
+known_limitations: []

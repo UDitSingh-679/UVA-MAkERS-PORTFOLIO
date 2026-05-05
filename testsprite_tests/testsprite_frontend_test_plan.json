@@ -1,0 +1,803 @@
+[
+  {
+    "id": "TC001",
+    "title": "Detect the active project type when starting a session",
+    "description": "This verifies that Kilo starts in a repository, identifies the project type, and shows the detected framework or language so the user can get project-aware help.",
+    "category": "Project Awareness",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start a session in the current project"
+      },
+      {
+        "type": "action",
+        "description": "Ask how the current codebase is organized"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the detected project type is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify project-specific guidance is shown"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Confirm a safe project command before it runs",
+    "description": "This test verifies that when a user requests a shell command, Kilo shows a safety prompt and only runs the command after explicit confirmation.",
+    "category": "Security & Safety",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Open Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask Kilo to run a shell command"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a safety confirmation prompt is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the command execution"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the command output is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Review command execution before running a shell command",
+    "description": "This verifies that Kilo shows a safety prompt before executing a requested shell command so the user can confirm the action.",
+    "category": "Command Execution",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start a session in the current project"
+      },
+      {
+        "type": "action",
+        "description": "Request a shell command to be run"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a safety confirmation prompt is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the requested command is shown for review"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Run a command with safety confirmation and use the output",
+    "description": "Verifies that a user can run a shell command, review the safety prompt, confirm execution, and inspect captured output.",
+    "category": "Command Execution Safety",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Run a shell command"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a safety confirmation prompt is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Confirm execution of the command"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify command output is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Explain how a code path works using code references",
+    "description": "This verifies that Kilo can answer a question about code behavior by tracing definitions and references across the repository.",
+    "category": "Project Awareness",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start a session in the current project"
+      },
+      {
+        "type": "action",
+        "description": "Ask how a function or class works in the codebase"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a code explanation is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify related definitions or references are shown"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Warn before a file-modifying change is applied",
+    "description": "This test verifies that Kilo presents a confirmation step before applying a code change that modifies files, and the change appears only after approval.",
+    "category": "Security & Safety",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Open Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask Kilo to generate a code change"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a safety confirmation prompt is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the change"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated file content is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Search for code and open a matching definition",
+    "description": "Verifies that a user can search semantically for code, review matching results, and open a definition from those results.",
+    "category": "Code Intelligence",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask to search for a relevant function in the codebase"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify semantic search results are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Open a matching definition from the search results"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the definition view is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Find a symbol and open its definition",
+    "description": "This verifies that Kilo can semantically search for a function or class and open the matching definition for inspection.",
+    "category": "Project Awareness",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start a session in the current project"
+      },
+      {
+        "type": "action",
+        "description": "Search for a function or class in the codebase"
+      },
+      {
+        "type": "action",
+        "description": "Open the matching definition"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the symbol definition is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the surrounding code context is shown"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Capture command output and continue from results",
+    "description": "This verifies that Kilo displays captured command output after execution and lets the user use that output to proceed with the task.",
+    "category": "Command Execution",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start a session in the current project"
+      },
+      {
+        "type": "action",
+        "description": "Request a shell command to be run"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify captured command output is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify follow-up help based on the output is shown"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Trace references from a definition across files",
+    "description": "Verifies that a user can inspect a definition and follow cross-file references to understand how it is used.",
+    "category": "Code Intelligence",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask for the definition of a function or class"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the located definition is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Open related references from the definition"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cross-file references are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Block an unsafe destructive request until reviewed",
+    "description": "This test verifies that Kilo interrupts a potentially destructive request with a warning and requires the user to review it before proceeding.",
+    "category": "Security & Safety",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Open Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask Kilo to perform a potentially destructive operation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a destructive action warning is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the action is not executed without confirmation"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Apply coordinated changes across multiple files",
+    "description": "Verifies that a user can request multi-file changes, review the proposed modifications, confirm them, and see the updated files.",
+    "category": "File Operations",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask to apply changes across multiple files"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify proposed modifications are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify updated files are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Understand code behavior through explanation and follow-up guidance",
+    "description": "Verifies that a user can ask how code works, review the explanation, and request a suggested improvement with a clear recommendation.",
+    "category": "Conversational Coding Assistant",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask a question about how the code works"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an explanation is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Ask for a suggested improvement"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a recommendation is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Inspect usages of a symbol across files",
+    "description": "This verifies that Kilo can show where a searched function or class is used across the codebase after opening its definition.",
+    "category": "Project Awareness",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start a session in the current project"
+      },
+      {
+        "type": "action",
+        "description": "Search for a function or class in the codebase"
+      },
+      {
+        "type": "action",
+        "description": "Open the matching definition"
+      },
+      {
+        "type": "action",
+        "description": "Inspect usages across files"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cross-file usages are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the usages relate to the same symbol"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Discover files and update a file with context",
+    "description": "Verifies that a user can find relevant files, read one with context, request an edit, and review the updated content.",
+    "category": "File Operations",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask to find relevant files"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify discovered files are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Read a file with context"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the file content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Request an edit"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify updated content is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC016",
+    "title": "Generate new code and review the proposed result",
+    "description": "Verifies that a user can request code for a new task and review the generated result before making changes.",
+    "category": "Conversational Coding Assistant",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Request code for a new task"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify generated code is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Ask for a refactor"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a refactored result is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC017",
+    "title": "Generate code and review proposed multi-file changes",
+    "description": "This verifies that Kilo can generate or edit code, present the proposed changes for review, and show the affected files before confirmation.",
+    "category": "Project Awareness",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start a session in the current project"
+      },
+      {
+        "type": "action",
+        "description": "Ask Kilo to generate or edit code for a feature"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify proposed multi-file changes are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the affected files are listed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC018",
+    "title": "Confirm code changes and verify updated files",
+    "description": "This verifies that Kilo can apply approved code changes and then show the updated file contents after the edit completes.",
+    "category": "Project Awareness",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start a session in the current project"
+      },
+      {
+        "type": "action",
+        "description": "Ask Kilo to generate or edit code for a feature"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the proposed changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated files are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the changes are reflected in the code view"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC019",
+    "title": "Review code feedback and best-practice guidance",
+    "description": "Verifies that a user can request a code review, inspect the findings, and then view best-practice recommendations.",
+    "category": "Conversational Coding Assistant",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask for a code review"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify review findings are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Ask for best-practice recommendations"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify guidance is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC020",
+    "title": "Continue a command-driven workflow after approval",
+    "description": "This test verifies that after the user approves a requested command, Kilo captures the output and allows the user to use it to continue the task.",
+    "category": "Security & Safety",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Open Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask Kilo to run a shell command"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a safety confirmation prompt is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the command execution"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the captured command output is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC021",
+    "title": "Delegate a review or testing task to a specialized agent",
+    "description": "Verifies that a user can delegate work to a specialized agent, review the findings, and use them to deepen codebase understanding.",
+    "category": "Agent Delegation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Delegate a task to a specialized agent for review or testing"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the agent findings are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Review the findings and continue the investigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify broader codebase insights are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC022",
+    "title": "Delegate a task to a specialized agent and review findings",
+    "description": "This verifies that Kilo can send a task to a specialized agent, show the agent’s progress, and present the completed result to the user.",
+    "category": "Agent System",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start a session in the current project"
+      },
+      {
+        "type": "action",
+        "description": "Delegate a review, testing, or exploration task to a specialized agent"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify agent progress is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the completed agent findings are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC023",
+    "title": "Combine results from multiple agent tasks",
+    "description": "This verifies that Kilo can launch multiple independent agent tasks and present their outputs together so the user can combine them into a broader understanding.",
+    "category": "Agent System",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Start a session in the current project"
+      },
+      {
+        "type": "action",
+        "description": "Launch multiple independent tasks with specialized agents"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify each task output is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the combined results are presented together"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC024",
+    "title": "Protect sensitive project content from direct exposure",
+    "description": "This test verifies that when a user asks to inspect sensitive project content, Kilo handles it safely and still provides a non-sensitive result.",
+    "category": "Security & Safety",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Open Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask Kilo to inspect sensitive project content"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify protected context handling is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a safe non-sensitive result is displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC025",
+    "title": "Handle an invalid command request safely",
+    "description": "This test verifies that when a user asks for an unsupported or invalid command request, Kilo responds with a safe refusal or guidance instead of executing it.",
+    "category": "Security & Safety",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Open Kilo in a project directory"
+      },
+      {
+        "type": "action",
+        "description": "Ask Kilo to run an invalid command request"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a safe refusal or guidance message is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no command execution output is displayed"
+      }
+    ],
+    "priority": "Low"
+  }
+]
