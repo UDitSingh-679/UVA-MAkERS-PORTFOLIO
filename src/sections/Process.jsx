@@ -17,8 +17,8 @@ export default function Process() {
           <div className="inline-block outfit text-xs font-bold tracking-widest uppercase py-2 px-5 rounded-full border-4 border-[#7B2FFF] text-[#7B2FFF] mb-6" style={{ background: 'rgba(123,47,255,.1)' }}>
             🔄 How It Works
           </div>
-          <h2 className="outfit text-5xl md:text-7xl font-black uppercase leading-none ts1">
-            Our <span className="text-[#7B2FFF]">Process</span>
+          <h2 className="outfit text-5xl md:text-7xl font-black uppercase leading-none">
+            <span className="text-[#7B2FFF] inline-block">Our</span> <span className="text-[#7B2FFF]">Process</span>
           </h2>
           <p className="text-white/60 text-lg mt-4 max-w-xl mx-auto">No surprises. You'll always know what's happening next.</p>
         </div>

@@ -16,8 +16,8 @@ export default function Services() {
     <section id="services" className="relative z-10 py-32 px-6 overflow-hidden bg-premium-tech">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <h2 className="bungee text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none ts1 mb-4">
-            Our <span className="text-shadow-pink inline-block transform -skew-x-12">Services</span>
+          <h2 className="bungee text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-4">
+            <span className="text-shadow-pink inline-block transform -skew-x-12">Our</span> <span className="text-shadow-pink inline-block transform -skew-x-12">Services</span>
           </h2>
           <p className="text-white/80 text-lg font-medium tracking-wide mt-2">Everything you need to build faster and better. No fluff, just pure power.</p>
         </div>

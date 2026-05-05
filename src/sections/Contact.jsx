@@ -96,9 +96,9 @@ export default function Contact() {
            <div className="inline-block outfit text-xs font-black tracking-widest uppercase py-2 px-5 rounded-full border-4 border-[#FF6B35] text-[#FF6B35] mb-6" style={{ background: 'rgba(255,107,53,.1)' }}>
              💬 Let's Connect
            </div>
-           <h2 className="outfit text-5xl md:text-7xl font-black uppercase leading-none ts2">
-             Let's Create <span className="text-[#FF6B35]">Something Great</span>
-           </h2>
+            <h2 className="outfit text-5xl md:text-7xl font-black uppercase leading-none">
+              <span className="text-[#FF6B35] inline-block">Let's Create</span> <span className="text-[#FF6B35]">Something Great</span>
+            </h2>
          </div>
             <div className="max-w-lg mx-auto">
            <div className="card" style={{ border: '2px solid #FF6B35', boxShadow: '6px 6px 0 #FF6B35' }}>

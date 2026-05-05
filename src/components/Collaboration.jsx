@@ -20,7 +20,7 @@ export default function Collaboration() {
             <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }} className="absolute top-1/2 -left-3 sm:-left-4 lg:-left-6 -translate-y-1/2 text-[#7B2FFF] drop-shadow-[0_0_10px_rgba(123,47,255,0.8)]"><svg width="20" height="20" className="sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-12 lg:h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="6" y1="20" x2="6" y2="14"></line><line x1="12" y1="20" x2="12" y2="9"></line><line x1="18" y1="20" x2="18" y2="4"></line></svg></motion.div>
           </div>
 
-          <motion.div animate={{ rotate: 360 }} transition={{ duration: 50, repeat: Infinity, ease: "linear" }} className="absolute w-64 h-64 sm:w-80 sm:h-80 md:w-[500px] md:h-[500px] lg:w-[750px] lg:h-[750px] border-[4px] sm:border-[5px] lg:border-[7px] border-dashed border-[#FF3AF2]/40 rounded-full" aria-hidden="true" />
+          <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="absolute w-64 h-64 sm:w-80 sm:h-80 md:w-[500px] md:h-[500px] lg:w-[750px] lg:h-[750px] border-[4px] sm:border-[5px] lg:border-[7px] border-dashed border-[#FF3AF2]/40 rounded-full" aria-hidden="true" />
 
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
             <motion.div aria-hidden="true" animate={{ opacity: [0.2, 0.5, 0.2] }} transition={{ duration: 3, repeat: Infinity }} className="absolute top-[10%] right-[10%] text-lg lg:text-xl text-[#00F5D4]">✦</motion.div>
