@@ -10,11 +10,9 @@
      "dev": "vite",
      "build": "vite build",
      "lint": "eslint .",
-     "preview": "vite preview",
-     "postinstall": "npm rebuild rolldown-binding || true"
+     "preview": "vite preview"
    },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.4",
     "@vercel/analytics": "^2.0.1",
     "dompurify": "^3.4.2",
     "framer-motion": "^12.38.0",
@@ -35,8 +33,8 @@
     "globals": "^17.5.0",
     "graphify": "^1.0.0",
     "playwright": "^1.59.1",
-    "postcss": "^8.5.13",
-    "tailwindcss": "^4.2.4",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^3.4.19",
     "vite": "^8.0.10"
   }
 }

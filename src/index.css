@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* Colors */
@@ -53,20 +55,6 @@
   --radius-radius-1: 24px;
   --radius-radius-2: 16px;
   --radius-radius-3: 12px;
-}
-
-@theme {
-  /* ── Semantic Aliases (backward-compat) ─────────────── */
-  --color-bg:       var(--color-color-5);   /* #0d0d1a */
-  --color-fg:       var(--color-color-1);   /* #ffffff */
-  --color-muted:    var(--color-color-9);   /* #2d1b4e */
-  --color-accent-1: var(--color-color-2);   /* #ff3af2 */
-  --color-accent-2: var(--color-color-4);   /* #00f5d4 */
-  --color-accent-3: var(--color-color-3);   /* #ffe600 */
-  --color-accent-4: var(--color-color-6);   /* #ff6b35 */
-  --color-accent-5: var(--color-color-7);   /* #7b2fff */
-  --color-pink:     var(--color-color-10);  /* #ec4899 */
-  --color-black:    var(--color-color-8);   /* #000000 */
 }
 
 html {
@@ -158,7 +146,6 @@ select:focus-visible {
 .animate-wiggle { animation: wiggle 1s ease-in-out infinite; }
 .animate-bounce-subtle { animation: bounce-subtle 2s ease-in-out infinite; }
 
-
 /* Gradient text - reserved for future use */
 
 /* Text shadows */
@@ -239,8 +226,6 @@ select:focus-visible {
                     radial-gradient(ellipse at 80% 70%, rgba(0,245,212,0.4) 0%, transparent 50%),
                     radial-gradient(ellipse at 50% 50%, rgba(123,47,255,0.3) 0%, transparent 60%);
 }
-
-
 
 /* Buttons */
 .btn-p {
@@ -365,41 +350,5 @@ footer {
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: .15s !important;
-  }
-}
-
-/* Typography Composite Utility Classes */
-@layer utilities {
-  .text-type-1-composite {
-    font-family: var(--font-type-1-family);
-    font-size: var(--font-type-1-size);
-    font-weight: var(--font-type-1-weight);
-    line-height: var(--font-type-1-line-height);
-  }
-  .text-type-2-composite {
-    font-family: var(--font-type-2-family);
-    font-size: var(--font-type-2-size);
-    font-weight: var(--font-type-2-weight);
-    line-height: var(--font-type-2-line-height);
-  }
-  .text-type-3-composite {
-    font-family: var(--font-type-3-family);
-    font-size: var(--font-type-3-size);
-    font-weight: var(--font-type-3-weight);
-    line-height: var(--font-type-3-line-height);
-  }
-  .text-type-4-composite {
-    font-family: var(--font-type-4-family);
-    font-size: var(--font-type-4-size);
-    font-weight: var(--font-type-4-weight);
-    line-height: var(--font-type-4-line-height);
-    letter-spacing: var(--font-type-4-letter-spacing, normal);
-  }
-  .text-type-5-composite {
-    font-family: var(--font-type-5-family);
-    font-size: var(--font-type-5-size);
-    font-weight: var(--font-type-5-weight);
-    line-height: var(--font-type-5-line-height);
-    letter-spacing: var(--font-type-5-letter-spacing, normal);
   }
 }
