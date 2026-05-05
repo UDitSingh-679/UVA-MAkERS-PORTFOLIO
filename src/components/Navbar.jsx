@@ -86,32 +86,32 @@ export default function Navbar() {
         </button>
       </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            id="mobile-menu"
-            role="dialog"
-            aria-modal="false"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden absolute top-full left-0 right-0 bg-[#0d0d1a]/98 backdrop-blur-md border-t border-white/10"
-          >
-            <div className="flex flex-col p-4 space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="outfit text-base font-bold uppercase tracking-wider text-white/80 hover:text-[#00F5D4] transition-colors py-2"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+       <AnimatePresence>
+         {isOpen && (
+           <motion.div
+             id="mobile-menu"
+             role="dialog"
+             aria-modal="false"
+             initial={{ opacity: 0, y: -20 }}
+             animate={{ opacity: 1, y: 0 }}
+             exit={{ opacity: 0, y: -20 }}
+             className="lg:hidden absolute top-full left-0 right-0 bg-[rgba(13,13,26,0.98)] backdrop-blur-md border-t border-white/10"
+           >
+             <div className="flex flex-col p-4 space-y-4">
+               {navLinks.map((link) => (
+                 <a
+                   key={link.name}
+                   href={link.href}
+                   onClick={(e) => handleNavClick(e, link.href)}
+                   className="outfit text-base font-bold uppercase tracking-wider text-white/80 hover:text-[#00F5D4] transition-colors py-2"
+                 >
+                   {link.name}
+                 </a>
+               ))}
+             </div>
+           </motion.div>
+         )}
+       </AnimatePresence>
     </motion.nav>
   );
 }
